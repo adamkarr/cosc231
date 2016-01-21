@@ -2,18 +2,28 @@
 <html>
 	<head>
 		<title>Homepage for Adam</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		
+		<!-- From Adobe for Typekit support, url: 
+		http://help.typekit.com/customer/portal/articles/6780 -->
+		<script src="https://use.typekit.net/ooi5rad.js"></script>
+		<script>try{Typekit.load({ async: false });}catch(e){}</script>
+		<!-- end of sample code -->
 	</head>
 	<body>
 		<h1>Adam Karr</h1>
 		
-		<img src="image.jpg" width="500px" />
-		
-		<p>
-			I am a senior here at Eastern Michigan University. My major is <br />
-			<strong>Simulation, Animation, & Gaming</strong>. My minor is Computer Science. <br />
-			I also go to <em>Washtenaw Community College</em>, where I'm working <br />
-			on a degree in photography.
-		</p>
+		<div>
+			<img src="image.jpg" width="500px" />
+			
+			<p id="about">
+				I am a senior here at Eastern Michigan University. My 
+				major is <strong>Simulation, Animation, & Gaming</strong>. 
+				My minor is Computer Science. I also go to <em>Washtenaw 
+				Community College</em>, where I'm working on a degree 
+				in photography.
+			</p>
+		</div>
 		
 		<p>
 			Here are the classes I am taking this semester:
@@ -28,7 +38,7 @@
 						COSC 231
 						</a>
 					</td>
-					<td>MW</td>
+					<td id="days">MW</td>
 					<td>7:20 p.m.</td>
 					<td>8:35 p.m.</td>
 					<td>Edward Gurnee</td>
@@ -37,7 +47,7 @@
 				<tr>
 					<td>Programming Languages</td>
 					<td>COSC 341</td>
-					<td>TR</td>
+					<td id="days">TR</td>
 					<td>5:30 p.m.</td>
 					<td>6:45 p.m.</td>
 					<td>Suchindran Maniccam</td>
@@ -46,7 +56,7 @@
 				<tr>
 					<td>Two-Dimensional Design</td>
 					<td>ARTS 121</td>
-					<td>MW</td>
+					<td id="days">MW</td>
 					<td>1:00 p.m.</td>
 					<td>3:50 p.m.</td>
 					<td>Corrie Baldauf</td>
@@ -55,7 +65,7 @@
 				<tr>
 					<td>Research and Writing</td>
 					<td>COT 300W</td>
-					<td>MW</td>
+					<td id="days">MW</td>
 					<td>11:00 a.m.</td>
 					<td>12:15 p.m.</td>
 					<td>Guy Downs</td>
@@ -64,7 +74,7 @@
 				<tr>
 					<td>Digital Photography II</td>
 					<td>PHO 228</td>
-					<td>TR</td>
+					<td id="days">TR</td>
 					<td>12:30 p.m.</td>
 					<td>3:25 p.m.</td>
 					<td>Jennifer Baker</td>
@@ -85,8 +95,9 @@
 		</table>
 		
 		<p>
-			I don't really do comic books, so I don't know a whole lot about the villains in them.
-			<br /> None the less, here's my top four from what I know.
+			I don't really do comic books, so I don't know a whole lot about 
+			the villains in them.
+			<br />None the less, here's my top four from what I know.
 		</p>
 		<ol>
 			<li>The Penguin</li>

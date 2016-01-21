@@ -1,0 +1,45 @@
+body {
+    background-color: #FFFFCC;
+    font-family: "proxima-nova", sans-serif; /* Typekit font */
+}
+
+h1 {
+	color: #0000ff;
+}
+
+#days {
+	text-align: center;
+}
+
+tr:nth-child(even) {
+	background-color: lightblue;
+}
+
+td {
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+thead {
+	background-color: lightblue;
+	font-weight: bold;
+}
+
+#about {
+	border-style: solid;
+	border-color: black;
+	border-width: thin;
+	text-align: justify;
+	margin-left: 510px;
+	padding: 3px;
+	font-family: "skolar",serif; /* Typekit font */
+}
+
+img {
+	float: left;
+}
+
+div {
+	padding-bottom: 1em;
+	float: left;
+}
