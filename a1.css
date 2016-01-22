@@ -1,0 +1,29 @@
+body {
+	font-family: "adelle", serif;
+	font-weight: normal;
+	background: #666666;
+}
+
+#content {
+	width: 60%;
+	margin: auto;
+	background: #eeeeee	;
+	padding: .5em 2em;
+	border: solid 3px;
+	border-radius: 10px;
+}
+
+h1 {
+	color: ForestGreen;
+	text-align: center;
+}
+
+#awesome {
+	font-family: "coquette", serif;
+	font-weight: 700;
+	font-size: larger;
+}
+
+hr {
+	width: 60%;
+}

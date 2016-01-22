@@ -2,56 +2,68 @@
 <html>
 	<head>
 		<title>Club Sign up</title>
+		<link rel="stylesheet" type="text/css" href="a1.css">
+		
+		<!-- From Adobe for Typekit support, url: 
+		http://help.typekit.com/customer/portal/articles/6780 -->
+		<script src="https://use.typekit.net/gda3xrs.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+		<!-- end of sample code -->
 	</head>
 	<body>
-		<h1>Sign up for my AWESOME NEW CLUB!</h1>
-		<h3>Enter your data below: </h3>
-		<form action="http://people.emich.edu/egurnee/call-n-response.php" method="post">
-			<p>
-				<label>Username: <input type="text" name="username" /></label>
-				<label>Password: <input type="password" name="pass" /></label>
-			</p>
-			<p>
-				<label>First name: <input type="text" name="first" /></label>
-				<label>Last name: <input type="text" name="last" /></label>
-			</p>
-			<label>
-				Age: <input type="number" step="1" min="0" value="20" name="age" />
-			</label>
-			<p>
-				Pick a comedian:<br />
-				<label>Stephen Colbert<input type="radio" name="comic" value="colbert" /></label>
-				<label>Jon Stewart<input type="radio" name="comic" value="stewart" /></label>
-			</p>
-			<p>
-				Pick a Pokemon: 
-				<select name="pokemon">
-					<option disabled selected>Choose</option>
-					<option value="Bulbasaur">Bulbasaur</option>
-					<option value="Charmander">Charmander</option>
-					<option value="Squirtle">Squirtle</option>
-					<option value="Pikachu">Pikachu</option>
-					<option value="Eevee">Eevee</option>
-				</select>
-			</p>
+		<div id="content">
+			<h1>Sign up for my <span id="awesome">AWESOME</span> NEW CLUB!</h1>
 			
-			<p>
-				Which of these pizza toppings do you approve of?<br />
-				<label><input type="checkbox" name="topping[1]" value="bacon" />Bacon</label>
-				<br />
-				<label><input type="checkbox" name="topping[2]" value="pine" />Pineapple</label>
-				<br />
-				<label><input type="checkbox" name="topping[3]" value="feta" />Feta cheese</label>
-				<br />
-				<label><input type="checkbox" name="topping[4]" value="fries" />French fries</label>
-				<br />
-				<label><input type="checkbox" name="topping[5]" value="pizza" />Another pizza</label>
-			</p>
+			<hr />
 			
-			<p>
-				<input type="reset" />
-				<input type="submit" value="Submit" />
-			</p>
-		</form>
+			<h3>Enter your data below: </h3>
+			<form action="http://people.emich.edu/egurnee/call-n-response.php" method="post">
+				<p>
+					<label>Username: <input type="text" name="username" /></label>
+					<label>Password: <input type="password" name="pass" /></label>
+				</p>
+				<p>
+					<label>First name: <input type="text" name="first" /></label>
+					<label>Last name: <input type="text" name="last" /></label>
+				</p>
+				<label>
+					Age: <input type="number" step="1" min="0" value="20" name="age" />
+				</label>
+				<p>
+					Pick a comedian:<br />
+					<label>Stephen Colbert<input type="radio" name="comic" value="colbert" /></label>
+					<label>Jon Stewart<input type="radio" name="comic" value="stewart" /></label>
+				</p>
+				<p>
+					Pick a Pokemon: 
+					<select name="pokemon">
+						<option disabled selected>Choose</option>
+						<option value="Bulbasaur">Bulbasaur</option>
+						<option value="Charmander">Charmander</option>
+						<option value="Squirtle">Squirtle</option>
+						<option value="Pikachu">Pikachu</option>
+						<option value="Eevee">Eevee</option>
+					</select>
+				</p>
+			
+				<p>
+					Which of these pizza toppings do you approve of?<br />
+					<label><input type="checkbox" name="topping[1]" value="bacon" />Bacon</label>
+					<br />
+					<label><input type="checkbox" name="topping[2]" value="pine" />Pineapple</label>
+					<br />
+					<label><input type="checkbox" name="topping[3]" value="feta" />Feta cheese</label>
+					<br />
+					<label><input type="checkbox" name="topping[4]" value="fries" />French fries</label>
+					<br />
+					<label><input type="checkbox" name="topping[5]" value="pizza" />Another pizza</label>
+				</p>
+			
+				<p>
+					<input type="reset" />
+					<input type="submit" value="Submit" />
+				</p>
+			</form>
+		</div>
 	</body>
 </html>
