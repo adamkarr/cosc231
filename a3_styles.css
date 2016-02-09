@@ -1,0 +1,23 @@
+body {
+  background-color: #333;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif
+  color: #333;
+}
+
+#container {
+  background-color: #9c0;
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+#desc, #options {
+  padding: 2em;
+}
+
+#image {
+  float: right;
+  height: 300px;
+  padding: 2em;
+}
