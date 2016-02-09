@@ -1,5 +1,4 @@
-var loc = "a3_assets/";
-var game = [
+var loc = "a3_assets/", game = [
   { //cloc == 0
     "src": "forest.jpg",
     "desc": "You\'ve woken up to find yourself deep in the forest. Find your way back home.",
@@ -192,17 +191,15 @@ var game = [
       }
     ]
   }
-];
-  
-var cloc = 0;     //starting location
+], cloc = 0;     //starting location
 
 function changeImage () {
-  document.getElementById("image").src = loc + game[cloc].src;
+  document.getElementById('image').src = loc + game[cloc].src;
 };
 
 function changeLoc (num) {
     cloc = num;
-    changeImage(cloc);
+    changeImage();
     printCurrentLoc();
 };
 
