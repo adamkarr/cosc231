@@ -1,0 +1,193 @@
+body {
+  background-image: url("lego_assets/bg.jpg");
+  font-family: "museo", Rockwell, “Courier Bold”, Courier, Georgia, Times, 
+    “Times New Roman”, serif;
+  font-weight: 300;
+  color: #333;
+}
+
+header, div, aside, section, article {
+  overflow: auto;
+}
+
+nav {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+nav ul {
+  display: table;
+  width: 90%;
+  margin: auto;
+}
+
+nav li {
+  display: table-cell;
+  width: 25%;
+  text-align: center;
+  font-family: "Skia", "Helvetica Nueue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+nav a {
+  color: #960;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #900;
+}
+
+article {
+  float: left;
+  margin: auto;
+  width: 50%;
+  text-align: justify;
+}
+
+article p, #comparison {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+aside {
+  float: right;
+  width: 220px;
+  padding: 1em;
+}
+
+footer {
+  color: #666;
+  margin: 50px 30px 25px;
+  font-size: 10px;
+  text-align: right;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Skia", "Helvetica Nueue", Helvetica, Arial, sans-serif;
+  font-size: 90px;
+  color: #c93;
+  text-shadow: 0 0 5px #333;
+  margin: auto;
+}
+
+form ul li {
+  list-style-type: none;
+  text-align: right;
+  padding-right: 10%;
+  padding-top: 3px;
+}
+
+input, select {
+  width: 60%;
+  background-color: white;
+}
+
+td {
+  text-align: center;
+  box-shadow: 0 0 1px #333;
+}
+
+#theader td {
+  font-weight: 600;
+}
+
+tr:nth-child(odd) {
+  background-color: #9cc;
+}
+
+.centered {
+  margin: auto;
+  width: 80%;
+}
+
+h2.centered {
+  margin: 20px auto;
+}
+
+.copyright {
+  float: left;
+  text-align: left;
+}
+
+#aboutpage {
+  padding: .5em 5em;
+  clear: both;
+}
+
+#comparison {
+  box-shadow: 0 0 5px #333;
+  margin-bottom: 5px;
+}
+
+#submit {
+  margin-top: 20px;
+  width: 100%;
+}
+
+#product-picker {
+  text-align: left;
+  width: 100%;
+}
+
+#name {
+  font-weight: bold;
+  text-align: center;
+}
+
+#egypt {
+  font-weight: 600;
+}
+
+#container {
+  width: 80%;
+  background-color: #ccc;
+  box-shadow: 0 0 5px #333;
+  margin: auto;
+}
+
+#lego {
+  height: 100px;
+  float: left;
+  padding-right: 1em;
+}
+
+#adventurer {
+  height: 90px;
+  float: right;
+  padding: 5px 1em;
+}
+
+#product {
+  margin: auto;
+  width: 200px;
+  margin: .5em;
+  box-shadow: 0 0 5px #333;
+}
+
+#desc {
+  text-align: justify;
+}
+
+#price {
+  text-align: center;
+  font-weight: bold;
+}
+
+#index-name {
+  text-align: center;
+  font-family: "Skia", "Helvetica Nueue", Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  color: #c93;
+  text-shadow: 0 0 5px #333;
+  margin: 10px auto 10px;
+}
+
+#index-image {
+  width: 90%;
+  display: block;
+  margin: 20px auto 10px;
+  box-shadow: 0 0 10px #333;
+}
