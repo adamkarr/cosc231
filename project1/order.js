@@ -8,7 +8,7 @@ var loc = 'lego_assets/', order = [
     'price': '$20.00'
   },
   {
-    'src': '5938.jpg',
+    'src': '5938.png',
     'name': 'Oasis Ambush<br />76 pieces',
     'desc': 'Includes a statue of the Egyptian god Anubis that lifts to reveal '
       + 'treasure and hieroglyphics.<br />Released: 1998',
@@ -49,3 +49,34 @@ function submitOrder() {
   alert('Order submitted');
   window.location = '/order.html';
 }
+
+
+
+/* Image Citations:
+
+Lego logo, Adventurers logo, and product images from Brickipedia
+http://lego.wikia.com/wiki/File:LEGO_logo.jpg
+No changes made.
+http://lego.wikia.com/wiki/File:Adventures_Logo.png
+No changes made.
+http://lego.wikia.com/wiki/File:2879_Desert_Expedition.jpg
+No changes made.
+http://lego.wikia.com/wiki/File:5928-1-1.jpg
+No changes made.
+http://lego.wikia.com/wiki/File:5938.png
+No changes made.
+http://lego.wikia.com/wiki/File:5988_Box.jpg
+No changes made.
+http://lego.wikia.com/wiki/File:Adventurers_combined_Lego.jpg
+No changes made.
+
+Background image from bgfons
+http://bgfons.com/download/1336
+No changes made.
+
+Homepage image from S3ISOR on Flickr
+https://www.flickr.com/photos/59263516@N08/16055660600
+No changes made.
+License: https://creativecommons.org/licenses/by/2.0/
+
+*/

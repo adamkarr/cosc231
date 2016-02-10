@@ -1,7 +1,7 @@
 body {
   background-image: url("lego_assets/bg.jpg");
-  font-family: "museo", Rockwell, “Courier Bold”, Courier, Georgia, Times, 
-    “Times New Roman”, serif;
+  font-family: "museo", Rockwell, "Courier Bold", Courier, Georgia, Times, 
+    "Times New Roman", serif;
   font-weight: 300;
   color: #333;
 }
@@ -39,14 +39,14 @@ nav a:hover {
   color: #900;
 }
 
-article {
+.about {
   float: left;
   margin: auto;
   width: 50%;
   text-align: justify;
 }
 
-article p, #comparison {
+.about p, #comparison {
   margin-left: 15px;
   margin-right: 15px;
 }
