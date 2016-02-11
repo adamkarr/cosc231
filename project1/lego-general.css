@@ -1,3 +1,15 @@
+/*
+    COSC 231
+    Project 1
+    Lego Egypt Website
+    
+    lego-general.css
+    CSS for all pages
+    
+    Adam Karr
+    2016-02-10
+*/
+
 body {
   background-image: url("lego_assets/bg.jpg");
   font-family: "museo", Rockwell, "Courier Bold", Courier, Georgia, Times, 
@@ -33,10 +45,12 @@ nav li {
 nav a {
   color: #960;
   text-decoration: none;
+  transition: 0.3s ease;
 }
 
 nav a:hover {
   color: #900;
+  background-color: #bbb;
 }
 
 .about {
@@ -85,17 +99,33 @@ input, select {
   background-color: white;
 }
 
+table {
+  width: 100%;
+}
+
 td {
   text-align: center;
   box-shadow: 0 0 1px #333;
 }
 
-#theader td {
+#theader {
   font-weight: 600;
 }
 
+#theader:hover {
+  background-color: #bbb;
+}
+
+tr {
+  transition: 0.3s ease;
+}
+
+tr:hover, tr:nth-child(odd):hover {
+  background-color: #c93;
+}
+
 tr:nth-child(odd) {
-  background-color: #9cc;
+  background-color: #bbb;
 }
 
 .centered {

@@ -1,3 +1,15 @@
+/*
+    COSC 231
+    Project 1
+    Lego Egypt Website
+    
+    order.js
+    Javascript to change image and description on order page
+    
+    Adam Karr
+    2016-02-10
+*/
+
 var loc = 'lego_assets/', order = [
   {
     'src': '2879.jpg',
