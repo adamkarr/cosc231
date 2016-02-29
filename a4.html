@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+  <title>Static HTML Page Generator</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background-color: #ffc;
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    }
+    textarea {
+      width: 275px;
+      height: 75px;
+    }
+    .styling {
+      float: left;
+      padding: 0 2em 0 0;
+    }
+  </style>
+  <script>
+    function subtitle () {
+      var st = document.getElementById('checkst').checked;
+      
+      if (st == true)
+        document.getElementById('sub').hidden = false;
+      else
+        document.getElementById('sub').hidden = true;
+    }
+    
+    function newPage() {
+      var newdo = window.open();
+      
+      var style = '<style>';
+      style += 'body {\n\t background-color: '+document.getElementById('bgcolor').value+';\n';
+      style += '\t font-family: '+document.getElementById('fontfamily').value+';\n}\n\n';
+      style += '#container {\n\t width: '+document.getElementById('cw').value+'%;\n\t margin: auto;\n}\n\n';
+      style += 'img {\n\t width: '+document.getElementById('imgw').value+'px;\n}\n\n';
+      style += 'p {\n\t text-align: justify;\n}\n';
+      style += '</style>';
+      
+      newdo.document.head.innerHTML = style;
+      
+      var content = '<div id="container">'
+      content += '<h1>'+document.getElementById('title').value+'</h1>';
+      if (document.getElementById('checkst').checked)
+        content += '<h2>'+document.getElementById('sub').value+'</h2>';
+      
+      content += '<img src="'+document.getElementById('imgurl').value+'" alt="" />';
+      
+      if (document.getElementById('dividers').checked)
+        content += '<hr />';
+      
+      content += '<ul><li>';
+      var c, s = document.getElementById('list').value;
+      for (var i = 0; i < s.length; i++) {
+        c = s.charAt(i);
+        if(c == '\n')
+          content += '</li><li>';
+        else
+          content += c;
+      }
+      content += '</li></ul>';
+      
+      if (document.getElementById('dividers').checked)
+        content += '<hr />';
+      
+      content += '<p>'+document.getElementById('purpose').value+'</p></div>';
+      
+      newdo.document.body.innerHTML = content;
+      
+      localStorage.setItem('backgroundColor',document.getElementById('bgcolor').value);
+      localStorage.setItem('fontFamily',document.getElementById('fontfamily').value);
+    }
+  </script>
+</head>
+<body>
+  <h1>Static HTML Page Generator</h1>
+  <form>
+    <label>Title: <input type="text" id="title" /></label>
+    <br />
+    <label>Subtitle? <input type="checkbox" onchange="subtitle()" id="checkst"/></label>
+    <input hidden type="text" id="sub" />
+    <br />
+    
+    <label>Image URL: <input type="text" id="imgurl" /></label>
+    <br />
+    <label>Image width in pixels: <input type="number" min="0" id="imgw"/></label>
+    <br />
+    
+    <textarea id="list" placeholder="List of items:"></textarea><br />
+    <textarea id="purpose" placeholder="Purpose of the page:"></textarea>
+    <br />
+    
+    <label>Page dividers? <input type="checkbox" id="dividers" /></label>
+    
+    <fieldset>
+      <legend>Styling</legend>
+      <div class="styling">
+        <label>
+          Background color: <br /><input type="color" id="bgcolor" value="#ffffff" />
+        </label>
+      </div>
+      <div class="styling">
+        <label>Content width: <br />
+         <input type="number" id="cw" min="20" max="100" value="80" />
+        </label>
+      </div>
+      <div class="styling">
+        <label>Font family: <br />
+          <select id="fontfamily">
+            <option value="'Times New Roman', Times, serif">Times</option>
+            <option value="Arial, Helvetica, sans-serif">Arial</option>
+            <option value="'Courier New', Courier, monospace">Courier</option>
+            <option value="'Palatino Linotype', 'Book Antiqua', Palatino, serif">Palatino</option>
+          </select>
+        </label>
+      </div>
+    </fieldset>
+  </form>
+  <button onClick="newPage()">Submit</button>
+</body>
+</html>
