@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+  <head>
+    <title>JS Paint</title>
+    <meta charset="utf-8">
+    <style> 
+      body {
+        background-color: #ddc;
+        font-family: "Helvetica Nueue", Helvetica, Arial, sans-serif;
+      }
+      canvas {
+        outline: 1px dotted black;
+        background-color: white;
+      }
+      h1, h2 {
+        text-align: center;
+        color: #006;
+      }
+      h1 {
+        font-size: 3em;
+        color: #006;
+      }
+      h2 {
+        font-size: 1.5em;
+        text-decoration: underline;
+        color: #060;
+      }
+      #controls {
+        float: left;
+        width: 100px;
+      }
+      #brush {
+        width: 80%;
+      }
+      #container {
+        margin: auto;
+        overflow: auto;
+        width: 815px;
+      }
+      #draw {
+        border: 1px dotted #999;
+        padding: 10px 0 5px 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>JS Paint</h1>
+      <h2>Select your brush size and color, and draw in the box below!</h2>
+      
+      <div id="draw">
+        <div id="controls">
+          <p>
+            Brush Size: <span id="brushsize">3</span>
+            <input type="range" id="brush" min="1" max="10" 
+              onchange="changeSize(this.value)" value="3" />
+          </p>
+          <p>
+          Color: <input type="color" id="color" onchange="changeColor(this.value)" />
+          </p>
+          <p>
+            Eraser <input type="checkbox" onchange="eraser()" id="erase"/>
+          </p>
+          <p>
+            <button onclick="canvas.width = canvas.width;">Clear canvas</button>
+          </p>
+        </div>
+        <canvas id="canvas"></canvas>
+      </div>
+    </div>
+    
+    <script>
+      var canvas = document.getElementById('canvas');
+      var ctx = canvas.getContext('2d');
+      
+      canvas.width = 700;
+      canvas.height = 500;
+
+      ctx.lineWidth = document.getElementById('brush').value;
+      ctx.lineJoin = 'round';
+      ctx.lineCap = 'round';
+      ctx.strokeStyle = document.getElementById('color').value;
+      
+      var clicked = false;
+      canvas.addEventListener('mousedown', function(e) {
+        ctx.moveTo(e.pageX - this.offsetLeft,e.pageY - this.offsetTop);
+        ctx.beginPath();
+        clicked = true;
+      },false);
+      
+      canvas.addEventListener('mousemove', function(e) {
+        if (clicked) {
+          ctx.lineTo(e.pageX - this.offsetLeft,e.pageY - this.offsetTop);
+          ctx.stroke();
+        }
+      },false);
+      
+      canvas.addEventListener('mouseup', function(e) {
+        clicked = false;
+      },false);
+
+      function changeSize (num) {
+        ctx.lineWidth = num;
+        document.getElementById('brushsize').innerHTML = num;
+      }
+      
+      function changeColor (color) {
+        ctx.strokeStyle = color;
+      }
+      
+      function eraser () {
+        if (document.getElementById('erase').checked)
+          ctx.strokeStyle = '#ffffff';
+        else
+          ctx.strokeStyle = document.getElementById('color').value;
+      }
+    </script>
+  </body>
+</html>            
