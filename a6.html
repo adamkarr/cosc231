@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Book catalog</title>
+    <script>
+      var books = [];
+
+      books.push(Book("Absolute Java", "Savich", 111, true));
+      books.push(Book("Data Structures and Algorithms", "Lafore", 311, true));
+      books.push(Book("The Principles of Object-Oriented JavaScript", "Zakas", 231, 
+        false));
+
+      function Book(title, author, course, used) {
+        var newBook = {};
+        newBook.title = title;
+        newBook.author = author;
+        newBook.course = course;
+        newBook.used = used;
+
+        return newBook;
+      }
+
+      function addBook() {
+        if (document.getElementById('newTitle').value) {
+          books.push(Book(document.getElementById('newTitle').value, 
+            document.getElementById('newAuthor').value, 
+            document.getElementById('newCourse').value, 
+            document.getElementById('newUsed').value));
+
+          /* add new book to selector */
+          var opt = document.createElement('option');
+          opt.value = books.length;
+          opt.text = 'Book'+books.length;
+          document.getElementById('selector').appendChild(opt);
+        }
+      }
+
+      function display() {
+        var selected = books[Number(document.getElementById('selector').value)-1];
+
+        document.getElementById('title-dest').innerHTML = selected.title;
+        document.getElementById('author-dest').innerHTML = selected.author;
+        document.getElementById('course-dest').innerHTML = selected.course;
+        document.getElementById('used-dest').innerHTML = selected.used;
+      }
+    </script>
+    <style>
+      div {
+        border: 1px solid black;
+        padding: 10px;
+        float: left;
+      }
+      ul {
+        float: right;
+      }
+      ul li {
+        list-style-type: none;
+        text-align: right;
+      }
+      ul li select, input {
+        width: 65%
+      }
+      #books {
+        width: 30em;
+      }
+      #new-book {
+        display: block;
+        margin: 5px auto 0;
+        width: 100%;
+      }
+      #add-book h1 {
+        font-size: 1em;
+        margin: auto 0 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="add-book">
+      <h1>Add new book:</h1>
+      <ul>
+        <li>
+          <label>Title: <input type="text" id="newTitle" /></label>
+        </li>
+        <li>
+          <label>Author: <input type="text" id="newAuthor" /></label>
+        </li>
+        <li>
+          <label>Course: <input type="text" id="newCourse" /></label>
+        </li>
+        <li>
+          Used? 
+          <select id="newUsed">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        </li>
+      </ul>
+      <button id="new-book" onclick="addBook()">Add book</button>
+    </div>
+
+    <div id="books">
+      <select id="selector">
+        <option value="1">Book1</option>
+        <option value="2">Book2</option>
+        <option value="3">Book3</option>
+      </select>
+      <button onclick="display();"> View </button>
+
+      <table>
+        <tr>
+          <td>Title</td>
+          <td id="title-dest"> </td>
+        </tr>
+        <tr>
+          <td>Author</td>
+          <td id="author-dest"> </td>
+        </tr>
+        <tr>
+          <td>For what course?</td>
+          <td id="course-dest"> </td>
+        </tr>
+        <tr>
+          <td>Is the book used?</td>
+          <td id="used-dest"> </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
